@@ -1,0 +1,42 @@
+/* Full-screen layout */
+.roompage-container {
+  width: 100vw;
+  height: 100vh;
+  background-color: #000; /* black like video background */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Zego video UI wrapper */
+.meeting-wrapper {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  background-color: #000;
+}
+
+/* Optional: Hide scrollbars */
+body, html {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* Mobile-specific tweaks */
+@media (max-width: 768px) {
+  .meeting-wrapper {
+    padding: 0;
+    border-radius: 0;
+  }
+
+  .roompage-container {
+    align-items: stretch;
+  }
+}

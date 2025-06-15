@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import { useParams } from 'react-router-dom';
 import { ZegoUIKitPrebuilt } from '@zegocloud/zego-uikit-prebuilt';
+import './RoomPage.css';
 function RoomPage() {
     const { roomId } = useParams();
     const myMeeting = async (element) => {
@@ -20,12 +21,12 @@ function RoomPage() {
                 mode: ZegoUIKitPrebuilt.OneONoneCall,
 
             },
-            showScreenSharingButton: false,
+            showScreenSharingButton: true,
         })
     }
     return (
-        <div>
-            <div ref={myMeeting} />
+        <div className="roompage-container">
+            <div ref={myMeeting} className="meeting-wrapper" />
         </div>
     );
 }
